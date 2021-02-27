@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Práctica del módulo Javascript (CargaDatos) elaborada por 
+Alfredo Ramírez para EXITAE Delegaciones. 
+[ Carga dinámica de datos en Select con Javascript ] 
+Adaptado a 1980x1080 de resolución.
+Mejor si se usa Chrome/Chromium como navegador.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="cargadatos.js"></script>
+</head>
+<body background="bokeh.jpg">
+<div class="caja0">
+        <span id="logo"><img src="exitae_peq.png" /></span>
+    </div>
+    <div class="caja1">
+    <h2>CARGA DINÁMICA DE DATOS CON JAVASCRIPT</h2>
+        <p> <u>Primer paso:</u> Selecciona un valor en este combo: </p>
+        <br/>
+        <form>
+                <p>
+                    <select id='select1' onChange='cargarSelect2(this.value);'>
+                        <option value='0'>Selecciona una opcion</option>
+                        <option value='1'>Magos</option>
+                        <option value='2'>Hobbits</option>
+                        <option value='3'>Enanos</option>
+                    </select>
+            <p> <u>Segundo paso:</u> Una vez seleccionado el primer valor, se cargará dinámicanente una lista de valores asociados al anterior listado en el siguiente combo.</p>
+            <br/>
+                <select id='select2' onChange='seleccionado_select2();' disabled>
+                    <option value='0'>Desactivado</option>
+                </select>
+            </p>
+            </br>
+                <center>
+                    <input type="button" name="Boton de borrado" onClick="location.reload();" class="boton gris" value="Reiniciar" />
+                </center>           
+        </form>
+        </div>
+</body>
+</html>
